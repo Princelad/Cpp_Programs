@@ -29,7 +29,7 @@ int main()
     cout << "Enter marks of Professional Communication(Practical):";
     cin >> PC_P;
 
-    cout << "\n\n\n\n====================================Result====================================\n";
+    cout << "\n\n\n\n====================================Result====================================\n\n";
 
     cout << "StudentID\t"
          << ":" << ID << endl;
