@@ -1,15 +1,28 @@
+/*This program is created by 23CS037 Prince Lad*/
+
+/*
+WAP to print the result of the students,
+INPUTS:Student ID (alphanumeric of length 6 to 7), Student name (string without space), Semester (number
+between 1 to 8), 3 Subject names (string with space), Theory and practical marks of all subject
+(number between 0 to 100)
+*/
+
 #include <iostream>
 #include <iomanip>
 
 using namespace std;
+
+// Initaizing functions.
 string grade(int);
 int point(int);
 
 int main()
 {
+    // Creating requried variables.
     string ID, Name;
     int Sem, CP_T, BE_T, PC_T, CP_P, BE_P, PC_P, SGPA;
 
+    // Getting user's input.
     cout << "Enter StudentID:";
     cin >> ID;
     cout << "Enter your Name:";
@@ -29,6 +42,7 @@ int main()
     cout << "Enter marks of Professional Communication(Practical):";
     cin >> PC_P;
 
+    // Printing the result.
     cout << "\n\n\n\n====================================Result====================================\n\n";
 
     cout << "StudentID\t"
@@ -46,9 +60,12 @@ int main()
 
     cout << "\nSGPA:" << SGPA << endl; 
 
+    
+    cout << "\n\n23CS037 Prince\n"; 
     return 0;
 }
 
+// Returns the grade in letters.
 string grade(int a)
 {
     string Grade;
@@ -88,6 +105,7 @@ string grade(int a)
     return Grade;
 }
 
+// Returns the grade points.
 int point(int a)
 {
 
