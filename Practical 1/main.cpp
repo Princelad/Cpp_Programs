@@ -51,10 +51,10 @@ int main()
          << ":" << Name << endl;
     cout << "Semester\t"
          << ":" << Sem << endl;
-    cout << setw(47) << "Theory\tPractical" << endl;
-    cout << "Computer Programming\t\t" << grade(CP_T) << "\t" << grade(CP_P) << endl;
-    cout << "Basics of Electronics\t\t" << grade(BE_T) << "\t" << grade(BE_P) << endl;
-    cout << "Professional Communication\t" << grade(PC_T) << "\t" << grade(PC_P) << endl;
+    cout << right << setw(50) << "Theory   Practical" << endl;
+    cout << left << setw(35) << "Computer Programming" << grade(CP_T) << "\t    " << grade(CP_P) << endl;
+    cout << left << setw(35) << "Basics of Electronics" << grade(BE_T) << "\t    " << grade(BE_P) << endl;
+    cout << left << setw(35) << "Professional Communication" << grade(PC_T) << "\t    " << grade(PC_P) << endl;
 
     SGPA = ((2 * point(CP_T)) + (2 * point(BE_T)) + (1 * point(PC_T))) / 5;
 
