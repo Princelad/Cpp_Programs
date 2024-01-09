@@ -61,7 +61,7 @@ int main()
     cout << "\nSGPA:" << SGPA << endl; 
 
     
-    cout << "\n\n23CS037 Prince\n"; 
+    cout << "\n\n23CS037 Prince"<< endl; 
     return 0;
 }
 
