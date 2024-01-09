@@ -107,6 +107,7 @@ add:
             else
             {
                 cout << "Exiting." << endl;
+                break;
             }
         }
 
