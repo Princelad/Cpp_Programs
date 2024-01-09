@@ -110,21 +110,23 @@ add:
                 break;
             }
         }
-
-        cout << "--------------------------------------------------------------" << endl;
-
-        cout << left << setw(30) << "Employee name" << ": " << emp[i].emp_name << endl;
-        cout << left << setw(30) << "Qualification" << ": " << emp[i].emp_qual << endl;
-        cout << left << setw(30) << "Experience" << ": " << emp[i].emp_exp << endl;
-        cout << left << setw(30) << "Contact number" << ": " << emp[i].emp_contact << endl;
-
-        cout << "Do you want get information of another employee if yes the press 'Y' else 'N' for no :" << endl;
-        cin >> flag1;
-
-        if (flag1 == "N" || flag1 == "n")
+        else
         {
-            cout << "Exiting." << endl;
-            break;
+            cout << "--------------------------------------------------------------" << endl;
+
+            cout << left << setw(30) << "Employee name" << ": " << emp[i].emp_name << endl;
+            cout << left << setw(30) << "Qualification" << ": " << emp[i].emp_qual << endl;
+            cout << left << setw(30) << "Experience" << ": " << emp[i].emp_exp << endl;
+            cout << left << setw(30) << "Contact number" << ": " << emp[i].emp_contact << endl;
+
+            cout << "Do you want get information of another employee if yes the press 'Y' else 'N' for no :" << endl;
+            cin >> flag1;
+
+            if (flag1 == "N" || flag1 == "n")
+            {
+                cout << "Exiting." << endl;
+                break;
+            }
         }
     }
 
