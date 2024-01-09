@@ -116,7 +116,7 @@ add:
 
             cout << left << setw(30) << "Employee name" << ": " << emp[i].emp_name << endl;
             cout << left << setw(30) << "Qualification" << ": " << emp[i].emp_qual << endl;
-            cout << left << setw(30) << "Experience" << ": " << emp[i].emp_exp << endl;
+            cout << left << setw(30) << "Experience" << ": " << emp[i].emp_exp << " years" << endl;
             cout << left << setw(30) << "Contact number" << ": " << emp[i].emp_contact << endl;
 
             cout << "Do you want get information of another employee if yes the press 'Y' else 'N' for no :" << endl;
