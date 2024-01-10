@@ -1,8 +1,8 @@
 /*This program is created by 23CS037 Prince Lad*/
 
 /*
-WAP to print the employee details.
-INPUTS:Number of employee (number between 0 to 1000), Employee ID (4 digit number), Employee name
+WAP to print the employee details taking informaton the console.
+INPUTS:Number of employee (number between 0 to 1000), Employee ID (3 digit number), Employee name
 (string with space), Qualification (floating point number), Experience (factional point number), Contact
 number (10 digit number).
 */
