@@ -14,6 +14,7 @@ number (10 digit number).
 
 using namespace std;
 
+// Structure for the employee information.
 struct employee
 {
     int emp_num;
@@ -35,9 +36,11 @@ add:
 
     while (true)
     {
+        // asking the new ID
         cout << "Enter the employee ID : " << endl;
         cin >> emp[i].emp_num;
 
+        // Checking if the ID already exist or not.
         for(int j = 0; j < i ; j++)
         {
             if(emp[j].emp_num == emp[i].emp_num)
@@ -54,6 +57,7 @@ add:
 
         cin.ignore();
 
+        // Asking for other information.
         cout << "Enter the employee name : " << endl;
         getline(cin, emp[i].emp_name);
 
@@ -66,6 +70,7 @@ add:
         cout << "Enter the employee contact no. : " << endl;
         cin >> emp[i].emp_contact;
 
+        // Asking weather the user wants to enter new number or not.
         cout << "Do you want add another employee if yes the press 'Y' else 'N' for no :" << endl;
         cin >> flag;
 
@@ -76,6 +81,7 @@ add:
 
         i++;
 
+        // Checking for max capacity.
         if(i == MAX_EMPLOYEE)
         {
             cout << "Exiting." << endl;
@@ -87,22 +93,24 @@ add:
 
     while (true)
     {
-        i = 0;
+        int j = 0;
         int num, flag2;
         string flag1;
-        cout << "Enter the ID of the employee : " << endl;
+        cout << "Enter the ID of the employee : " << endl;  // Asking for the ID
         cin >> num;
 
-        while (emp[i].emp_num != num)
+        // Finding the index of the data.
+        while (emp[j].emp_num != num)
         {
-            i++;
-            if (i == (MAX_EMPLOYEE))
+            j++;
+            if (j == (MAX_EMPLOYEE))
             {
                 flag2 = 1;
                 break;
             }
         }
 
+        // If does not exist then asking if want to add new ID or exit.
         if (flag2 == 1)
         {
             cout << "--------------------------------------------------------------" << endl;
@@ -126,13 +134,15 @@ add:
         }
         else
         {
+            // Printing the data,
             cout << "--------------------------------------------------------------" << endl;
 
-            cout << left << setw(30) << "Employee name" << ": " << emp[i].emp_name << endl;
-            cout << left << setw(30) << "Qualification" << ": " << emp[i].emp_qual << endl;
-            cout << left << setw(30) << "Experience" << ": " << emp[i].emp_exp << " years" << endl;
-            cout << left << setw(30) << "Contact number" << ": " << emp[i].emp_contact << endl;
+            cout << left << setw(30) << "Employee name" << ": " << emp[j].emp_name << endl;
+            cout << left << setw(30) << "Qualification" << ": " << emp[j].emp_qual << endl;
+            cout << left << setw(30) << "Experience" << ": " << emp[j].emp_exp << " years" << endl;
+            cout << left << setw(30) << "Contact number" << ": " << emp[j].emp_contact << endl;
 
+            // Asking if wants to access info other employee or not.
             cout << "Do you want get information of another employee if yes the press 'Y' else 'N' for no :" << endl;
             cin >> flag1;
 
