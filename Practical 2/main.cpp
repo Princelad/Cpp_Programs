@@ -38,6 +38,20 @@ add:
         cout << "Enter the employee ID : " << endl;
         cin >> emp[i].emp_num;
 
+        for(int j = 0; j < i ; j++)
+        {
+            if(emp[j].emp_num == emp[i].emp_num)
+            {
+                cout << "--------------------------------------------------------------" << endl;
+                
+                cout << "Entered employee ID already exist.Please enter a new employee ID" << endl;
+
+                cout << "--------------------------------------------------------------" << endl;
+
+                goto add;
+            }
+        }
+
         cin.ignore();
 
         cout << "Enter the employee name : " << endl;
