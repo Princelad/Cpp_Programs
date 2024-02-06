@@ -8,21 +8,21 @@ number (10 digit number).
 */
 
 #include <iostream>
-#include <string.h>
+#include <string>
 #include <iomanip>
 #define MAX_EMPLOYEE 1000
 
 using namespace std;
 
-class employee
+struct employee
 {
-    private:
+private:
     int emp_contact;
     float emp_exp;
     string emp_name;
     string emp_qual;
 
-    public:
+public:
     int emp_num;
     void input ()
     {
@@ -54,9 +54,11 @@ class employee
     }
 };
 
+typedef struct employee Info;
+
 int main ()
 {
-    employee emp[MAX_EMPLOYEE];
+    Info emp[MAX_EMPLOYEE];
     int i = 0;
     char flag;
 
