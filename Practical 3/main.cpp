@@ -123,7 +123,7 @@ public:
         else{
             cout << left << setw(30) << "Transmission" << ": A.M.T."<< endl;
         }
-        cout << left << setw(30) << "Tank capacity" << ": " << tank_capacity << endl;
+        cout << left << setw(30) << "Tank capacity" << ": " << tank_capacity << " liters" << endl;
         cout << left << setw(30) << "Number of seats" << ": " << seating << endl;
         if(airbags == 1){
             cout << left << setw(30) << "Airbags" << ": Yes"<< endl;
