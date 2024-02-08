@@ -28,6 +28,9 @@ public:
     string model;
     int fuel;
     float price;
+    
+    // Entering the data for the object
+    
     void input (){
         cin.ignore();
 
@@ -100,6 +103,8 @@ public:
         }while(true);
     }
     
+    // Displaying output.
+    
     void output (){
         cout << "=============================================================================" << endl;
         cout << left << setw(30) << "Model name" << ": " << model << endl;
@@ -138,14 +143,14 @@ public:
 int main (){
     int no_car, i = 0, j = 0;
     
-    cout << "Enter the number of cars :" << endl;
+    cout << "Enter the number of cars :" << endl;// Asking for maximum entry of car.
     cin >> no_car;
 
     car c[no_car];
 
     while (i < no_car){
         
-        c[i].input();
+        c[i].input();// Calling the input functioon for object data.
         if(no_car > 1){
             cout << "=============================================================================" << endl;
         }
@@ -192,7 +197,7 @@ int main (){
                 cout << "Enter the choosed model :" << endl;
                 cin >> i;
 
-                i--;
+                i--;// To match the index no. of object.
 
                 c[i].output();
 
