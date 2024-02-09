@@ -227,7 +227,7 @@ int main (){
                 while(j < no_car){
                     
                     if(i == c[j].fuel){
-                        c[j].output();
+                        c[j].output();// Printing the models with same fuel type.
                     }
 
                     j++;
@@ -248,7 +248,7 @@ int main (){
                 while (j < no_car){
 
                     if(i >= c[j].price){
-                        c[j].output();
+                        c[j].output();// Printing the models according to the maximum set price limit.
                         break;
                     }
                     
@@ -263,7 +263,7 @@ int main (){
                 break;
         }
 
-        cout << "Do you want information on another car model?\n[1] Yes\n[2] No" << endl;
+        cout << "Do you want information on another car model?\n[1] Yes\n[2] No" << endl;// Asking for continuation.
         cout << "Your choice :";
         cin >> i;
 
