@@ -36,13 +36,14 @@ int main(){
         cout << "[2] Rectangle" << endl;
         cout << "[3] Cubiod" << endl;
         cout << "[4] Exit" << endl;
+        cout << "Enter the option :";
         cin >> option;
 
         if(option == 1){
             cout << "Enter the radius of the circle :" << endl;
             cin >> a;
 
-            cout << "Area :" << area(a);
+            cout << "Area :" << area(a) << endl;
         }
 
         if(option == 2){
@@ -52,7 +53,7 @@ int main(){
             cout << "Enter the breath of the rectangle :" << endl;
             cin >> b;
 
-            cout << "Area :" << area(a, b);
+            cout << "Area :" << area(a, b) << endl;
         }
 
         if(option == 3){
@@ -65,7 +66,7 @@ int main(){
             cout << "Enter the height of the cubiod :" << endl;
             cin >> c;
 
-            cout << "Area :" << area(a, b, c);            
+            cout << "Area :" << area(a, b, c) << endl;            
         }
     
     }while(option != 4);
