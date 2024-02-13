@@ -8,3 +8,15 @@ System calculates and display the area of a circle.
 System should count total number of circle object created and display total number of active circle object
 when any circle object is deleted.
 */
+
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+int main(){
+    
+    
+    return 0;
+}
