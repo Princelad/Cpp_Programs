@@ -15,8 +15,41 @@ when any circle object is deleted.
 
 using namespace std;
 
+class area{
+private:
+    int radius;
+    static int count;
+public:
+    area(){
+        radius = 1;
+        cout << "The circle with radius " << radius << " has area " << 3.14 * radius * radius << "." << endl;
+        count ++;
+    }
+
+    area(float r){
+        radius = r;
+        cout << "The circle with radius " << radius << " has area " << 3.14 * radius * radius << "." << endl;
+        count ++;
+    }
+
+    area(area &r){
+        radius = r.radius;
+        cout << "The circle with radius " << radius << " has area " << 3.14 * radius * radius << "." << endl;
+        count ++;
+    }
+
+    ~area(){
+        cout << "Object has been deleted." << endl;
+        cout << "Total archive objects are " << count -- << endl;
+    }
+};
+
+int area :: count;
+
 int main(){
-    
+    area a1;
+    area a2(20);
+    area a3(a1);
     
     return 0;
 }
