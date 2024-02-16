@@ -15,30 +15,31 @@ when any circle object is deleted.
 
 using namespace std;
 
+// Creating class for objects.
 class area{
 private:
     int radius;
     static int count;
 public:
-    area(){
+    area(){// Default constructor.
         radius = 1;
         cout << "The circle with radius " << radius << " has area " << 3.14 * radius * radius << "." << endl;
         count ++;
     }
 
-    area(float r){
+    area(float r){// Parameterized constructor.
         radius = r;
         cout << "The circle with radius " << radius << " has area " << 3.14 * radius * radius << "." << endl;
         count ++;
     }
 
-    area(area &r){
+    area(area &r){// Copy constructor.
         radius = r.radius;
         cout << "The circle with radius " << radius << " has area " << 3.14 * radius * radius << "." << endl;
         count ++;
     }
 
-    ~area(){
+    ~area(){// Destructor
         cout << "Object has been deleted." << endl;
         cout << "Total archive objects are " << count -- << endl;
         if(count == 0){
