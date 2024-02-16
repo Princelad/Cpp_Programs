@@ -40,8 +40,10 @@ public:
     }
 
     ~area(){// Destructor
+        cout << "==================================================================================" << endl;
         cout << "Object has been deleted." << endl;
         cout << "Total archive objects are " << (count --) - 1 << endl;
+        cout << "==================================================================================" << endl;
         if(count == 0){
             cout << "\n\n23CS037 Prince" << endl;
         }
