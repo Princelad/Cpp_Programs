@@ -12,16 +12,16 @@ circle / rectangle / cuboid.
 
 using namespace std;
 
-float area(float a){
+inline float area(float a){
     const float PI = 3.14;
     return PI * a * a;
 }
 
-float area(float a, float b){
+inline float area(float a, float b){
     return a * b;
 }
 
-float area(float a, float b, float c){
+inline float area(float a, float b, float c){
     return 2*(a * b + b * c + c * a);
 }
 
