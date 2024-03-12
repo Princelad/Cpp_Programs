@@ -22,7 +22,7 @@ private:
     float emp_exp;
     string emp_name;
     string emp_qual;
-    static float total_exp;
+    static float total_exp;// For storing the total experience of all the employees.
 
 public:
     int emp_num;
@@ -59,7 +59,7 @@ public:
     {
         cout << "--------------------------------------------------------------" << endl;
 
-        cout << "The average experience of the employees is : " << (total_exp)/total_emp << endl;
+        cout << "The average experience of the employees is : " << (total_exp)/total_emp << endl;// Displaying the average.
 
         cout << "--------------------------------------------------------------" << endl;
     }
@@ -172,6 +172,7 @@ int main ()
         }
     }
 
+    // Since the i is the total number of the entries in the data so i is passed as arg for the function for calculating average.    
     Average.avg(i);
 
     cout << "\n\n23CS037 Prince" << endl;

@@ -38,6 +38,7 @@ public:
         cout << real << " + (" << img << ")i" << endl;
     }
 
+    // Operator overloading for the calculation of the complex numbers.
     Complex operator+ (Complex &a){
         Complex add (0,0);
         add.real = real + a.real;
@@ -119,6 +120,7 @@ int main(){
             continue;
         }
         
+        // Asking for the continution
         cout << "Do you want calculate for another number? If yes the press 'Y' else 'N' for no :" << endl;
         cin >> flag;
         if (flag == 'N' || flag == 'n'){
