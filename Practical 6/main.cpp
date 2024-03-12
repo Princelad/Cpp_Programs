@@ -18,7 +18,7 @@ using namespace std;
 class employee
 {
 private:
-    int emp_contact;
+    long long emp_contact;
     float emp_exp;
     string emp_name;
     string emp_qual;
