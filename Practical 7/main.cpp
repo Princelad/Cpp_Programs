@@ -27,6 +27,7 @@ public:
     }
 
     void input (){
+        cout << "--------------------------------------------------------------" << endl;
         cout << "Enter the real part of #" << count << " :" << endl;
         cin >> real;
         cout << "Enter the imaginary part of #" << count << " :" << endl;
@@ -35,7 +36,11 @@ public:
     }
 
     void output(){
+        cout << "--------------------------------------------------------------" << endl;
+
         cout << real << " + (" << img << ")i" << endl;
+
+        cout << "--------------------------------------------------------------" << endl;
     }
 
     // Operator overloading for the calculation of the complex numbers.
@@ -83,6 +88,7 @@ int main(){
     char flag;
 
     while (true){   
+        cout << "--------------------------------------------------------------" << endl;
         cout << "Choose an operation :" << endl;
         cout << "[1] Addition" << endl;
         cout << "[2] Subtraction" << endl;
@@ -117,14 +123,18 @@ int main(){
             break;
         default :
             cout << "Choose a proper operation for the imaginary number." << endl;
+
+            cout << "--------------------------------------------------------------" << endl;
             continue;
         }
         
         // Asking for the continution
         cout << "Do you want calculate for another number? If yes the press 'Y' else 'N' for no :" << endl;
         cin >> flag;
+        cout << "--------------------------------------------------------------" << endl;
         if (flag == 'N' || flag == 'n'){
             cout << "Exiting." << endl;
+            cout << "--------------------------------------------------------------" << endl;
             break;
         }
         else{
