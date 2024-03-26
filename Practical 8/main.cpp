@@ -93,7 +93,7 @@ public:
 
         cout << left << setw(30) << "Designation" << ": " << Designation << endl;
         cout << left << setw(30) << "Specialization" << ": " << Spec << endl;
-        cout << left << setw(30) << "Pay scale" << ": " << Pay_scale << endl;
+        cout << left << setw(30) << "Pay scale" << ": " << Pay_scale << "th pay" << endl;
     }
 
     int tempsearchemp(){
@@ -138,14 +138,15 @@ int main(){
             cout << "Choose the type of the employee :" << endl;
             cout << "[1] Teaching employee" << endl;
             cout << "[2] Non-Teaching employee" << endl;
+            cout<< "Enter your option : ";
             cin >> type;
 
-            if (type != 1 || type != 2){
-                cout << "Enter proper option." << endl;
-            }
-            else{
+            if (type == 1 || type == 2){
                 break;
             }
+            
+            cout << "Enter proper option." << endl;
+            continue;
         }
 
         if (type == 1){
@@ -163,7 +164,6 @@ int main(){
                 }
             }
 
-            count++;
             i++;
         }
         else{
@@ -181,7 +181,6 @@ int main(){
                 }
             }
 
-            count++;
             j++;
         }
 
@@ -215,14 +214,15 @@ int main(){
             cout << "Choose the type of the employee :" << endl;
             cout << "[1] Teaching employee" << endl;
             cout << "[2] Non-Teaching employee" << endl;
+            cout<< "Enter your option : ";
             cin >> type;
 
-            if (type != 1 || type != 2){
-                cout << "Enter proper option." << endl;
-            }
-            else{
+            if (type == 1 || type == 2){
                 break;
             }
+            
+            cout << "Enter proper option." << endl;
+            continue;
         }
 
         if (type == 1){
@@ -308,7 +308,7 @@ int main(){
                 }
             }
             else{
-                T_emp[l].tempoutput();
+                NT_emp[l].tempoutput();
 
                 // Asking if wants to access info other employee or not.
                 cout << "Do you want get information of another employee if yes the press 'Y' else 'N' for no :" << endl;
