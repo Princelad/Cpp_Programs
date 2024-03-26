@@ -13,8 +13,6 @@ Req 3 -- Retrieve average experience of employees
 #include <iostream>
 #include <string>
 #include <iomanip>
-#include <vector>
-#include <algorithm>
 #define MAX_EMPLOYEE 1000
 
 using namespace std;
