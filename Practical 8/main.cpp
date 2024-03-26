@@ -13,7 +13,7 @@ Req 3 -- Retrieve average experience of employees
 #include <iostream>
 #include <string>
 #include <iomanip>
-#define MAX_EMPLOYEE 1000
+#define MAX_EMPLOYEE 9999
 
 using namespace std;
 
@@ -167,8 +167,8 @@ int main(){
         else{
             NT_emp[j].tempinput();
 
-            for (int k = 0; k < count; k++){
-                if (NT_emp[k].tempsearchemp() == NT_emp[j].tempsearchemp()){
+            for (int l = 0; l < count; l++){
+                if (NT_emp[l].tempsearchemp() == NT_emp[j].tempsearchemp()){
                     cout << "--------------------------------------------------------------" << endl;
 
                     cout << "Entered employee ID already exist.Please enter a new employee ID" << endl;

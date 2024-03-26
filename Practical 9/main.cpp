@@ -9,6 +9,9 @@ Inputs -- Take centimeter measurement in centimeter class
 */
 
 #include <iostream>
+#include <string>
+
+using namespace std;
 
 class millimeter{
 
@@ -20,6 +23,6 @@ class centimeter{
 
 int main (){
 
-    
+    cout << "" << endl;
     return 0;
 }
