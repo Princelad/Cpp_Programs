@@ -60,35 +60,59 @@ int main (){
     centimeter CM;
     int type;
 
-    cout << "Choose the option of the converstion :" << endl;
-    cout << "[1] Millimeter to centimeter." << endl;
-    cout << "[2] Centimeter to millimeter." << endl;
-    cout << "Enter your choice :";
-    cin >> type;
+    do{
+        cout << "Choose the option of the converstion :" << endl;
+        cout << "[1] Millimeter to centimeter." << endl;
+        cout << "[2] Centimeter to millimeter." << endl;
+        cout << "[3] Exit." << endl;
+        cout << "Enter your choice :";
+        cin >> type;
 
-    switch (type){
-        case 1:
-            cout << "Enter the number to be converted :";
-            MM.input();
-
-            CM = MM;
-
-            cout << "Measurement in cm : " << CM.output() << endl;
-
+        if (type == 1 || type == 2){
+            cout << "=============================================================================" << endl;
+        }
+        else if(type == 3){
+            cout << "Exiting." << endl;
             break;
-        case 2:
-            cout << "Enter the number to be converted :";
-            CM.input();
-
-            MM = CM;
-
-            cout << "Measuremet in mm : " << MM.output() << endl;
-            
-            break;
-        default:
+        }
+        else{
             cout << "Enter proper input." << endl;
+            continue;
+        }
+
+        switch (type){
+            case 1:
+                cout << "Enter the number to be converted :";
+                MM.input();
+
+                CM = MM;
+
+                cout << "Measurement in cm : " << CM.output() << endl;
+
+                break;
+            case 2:
+                cout << "Enter the number to be converted :";
+                CM.input();
+
+                MM = CM;
+
+                cout << "Measurement in mm : " << MM.output() << endl;
+
+                break;
+        }
+
+        cout << "Do you want to convert another number?, 1 if Yes else 0." << endl;
+        cin >> type;
+
+        if(type == 0){
+            cout << "Exiting." << endl;
             break;
-    }
+        }
+        else{
+            cout << "=============================================================================" << endl;
+        }
+
+    }while(true);
     
     cout << "\n\n23CS037 Prince" << endl;
     return 0;
