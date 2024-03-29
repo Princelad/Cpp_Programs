@@ -87,7 +87,7 @@ int main (){
 
                 CM = MM;
 
-                cout << "Measurement in cm : " << CM.output() << endl;
+                cout << "Measurement in cm : " << CM.output() << "cm" << endl;
 
                 break;
             case 2:
@@ -96,7 +96,7 @@ int main (){
 
                 MM = CM;
 
-                cout << "Measurement in mm : " << MM.output() << endl;
+                cout << "Measurement in mm : " << MM.output() << "mm" << endl;
 
                 break;
         }
