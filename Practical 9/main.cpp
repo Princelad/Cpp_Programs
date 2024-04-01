@@ -13,49 +13,52 @@ Inputs -- Take centimeter measurement in centimeter class
 
 using namespace std;
 
-class millimeter{
-private:
-    int num_mm;
+class number{ 
+    float num;
+public:
+    void input(){
+        cin >> num;
+    }
+
+    int output(){
+        return num;
+    }
+};
+
+class millimeter : public number{
+    float num_mm;
 public:
     millimeter(){
         num_mm = 0;
     }
-    
-    millimeter(centimeter& a){
+
+    millimeter(number &a){
         num_mm = (a.output() * 10);
     }
 
-    void input (){
-        cin >> num_mm;
-    }
-
-    int output(){
+    int get_mm(){
         return num_mm;
     }
 };
 
-class centimeter{
-private:
-    int num_cm;
+class centimeter : public number{
+    float num_cm;
 public:
     centimeter(){
         num_cm = 0;
     }
 
-    centimeter(millimeter& b){
+    centimeter (number &b){
         num_cm = (b.output() / 10);
     }
 
-    void input (){
-        cin >> num_cm;
-    }
-
-    int output(){
+    int get_cm(){
         return num_cm;
     }
 };
 
 int main (){
+    number Num;
     millimeter MM;
     centimeter CM;
     int type;
@@ -69,7 +72,7 @@ int main (){
         cin >> type;
 
         if (type == 1 || type == 2){
-            cout << "=============================================================================" << endl;
+            cout << "=================================================================um============" << endl;
         }
         else if(type == 3){
             cout << "Exiting." << endl;
@@ -83,20 +86,20 @@ int main (){
         switch (type){
             case 1:
                 cout << "Enter the number to be converted :";
-                MM.input();
+                Num.input();
 
-                CM = MM;
+                CM = Num;
 
-                cout << "Measurement in cm : " << CM.output() << "cm" << endl;
+                cout << "Measurement in cm : " << CM.get_cm() << "cm" << endl;
 
                 break;
             case 2:
                 cout << "Enter the number to be converted :";
-                CM.input();
+                Num.input();
 
-                MM = CM;
+                MM = Num;
 
-                cout << "Measurement in mm : " << MM.output() << "mm" << endl;
+                cout << "Measurement in mm : " << MM.get_mm() << "mm" << endl;
 
                 break;
         }
