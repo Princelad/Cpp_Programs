@@ -9,7 +9,24 @@ WAP to print a result of a student.
 using namespace std;
 
 class Student{
-    
+private:
+    string stu_id, stu_name;
+    int semester;
+public:
+    void getdata_stu(){
+
+    }   
+    void putdata_stu(){
+
+    } 
+
+    void getdata_result(){
+
+    }
+
+    void putdata_result(){
+        
+    }
 };
 
 class Result{

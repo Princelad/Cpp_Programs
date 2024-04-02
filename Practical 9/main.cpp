@@ -8,100 +8,115 @@ Req 2 -- Convert centimeter to millimeter
 Inputs -- Take centimeter measurement in centimeter class
 */
 
-#include<iostream>
-#include<cstdlib>
+#include <iostream>
+#include <string>
+
 using namespace std;
 
-class cm;
-class mm{
-    double data;
+class number{ 
+    float num;
 public:
-    mm(){
-        data=0;
+    void input(){
+        cin >> num;
     }
 
-    mm(double x){
-        data=x;
-    }
-
-    mm(cm &x); 
-    double get(){
-        return data;
-    }
-
-    double to_cm(){
-        return data/10;
-    }
-
-    void set(double x){
-        data=x;
+    int output(){
+        return num;
     }
 };
 
-class cm{
-    double data;
+class millimeter : public number{
+    float num_mm;
 public:
-    cm(){
-        data=0;
+    millimeter(){
+        num_mm = 0;
     }
 
-    cm(double x){
-        data=x;
+    millimeter(number &a){
+        num_mm = (a.output() * 10);
     }
 
-    cm(mm &x){
-        data=x.to_cm();
-    }
-
-    double get(){
-        return data;
-    }
-
-    double to_mm(){
-        return data*10;
-    }
-
-    void set(double x){
-        data=x;
+    int get_mm(){
+        return num_mm;
     }
 };
 
-mm::mm(cm &x){
-    data=x.to_mm();
-}
-
-int main(){
-    cout<<"Enter 1 : mm to cm converter"<<endl;
-    cout<<"Enter 2 : cm to mm converter"<<endl;
-    int ch;
-    double data;
-    cin>>ch;
-
-    switch(ch){
-        case 1:{
-            cout<<"Enter measurement in mm: ";
-            cin>>data;
-
-            mm m1(data);
-
-            cm c1(m1);
-
-            cout<<"Measurement in cm : "<<c1.get();
-            break;
-        }
-        case 2:{
-            cout<<"Enter measurement in mm: ";
-            cin>>data;
-
-            cm c2(data);
-
-            mm m2(c2);
-            
-            cout<<"Measurement in mm : "<<m2.get();
-            break;
-        }
-        default:
-            cout<<"Choose valid option!!!";
+class centimeter : public number{
+    float num_cm;
+public:
+    centimeter(){
+        num_cm = 0;
     }
+
+    centimeter (number &b){
+        num_cm = (b.output() / 10);
+    }
+
+    int get_cm(){
+        return num_cm;
+    }
+};
+
+int main (){
+    number Num;
+    millimeter MM;
+    centimeter CM;
+    int type;
+
+    do{
+        cout << "Choose the option of the converstion :" << endl;
+        cout << "[1] Millimeter to centimeter." << endl;
+        cout << "[2] Centimeter to millimeter." << endl;
+        cout << "[3] Exit." << endl;
+        cout << "Enter your choice :";
+        cin >> type;
+
+        if (type == 1 || type == 2){
+            cout << "=================================================================um============" << endl;
+        }
+        else if(type == 3){
+            cout << "Exiting." << endl;
+            break;
+        }
+        else{
+            cout << "Enter proper input." << endl;
+            continue;
+        }
+
+        switch (type){
+            case 1:
+                cout << "Enter the number to be converted :";
+                Num.input();
+
+                CM = Num;
+
+                cout << "Measurement in cm : " << CM.get_cm() << "cm" << endl;
+
+                break;
+            case 2:
+                cout << "Enter the number to be converted :";
+                Num.input();
+
+                MM = Num;
+
+                cout << "Measurement in mm : " << MM.get_mm() << "mm" << endl;
+
+                break;
+        }
+
+        cout << "Do you want to convert another number?, 1 if Yes else 0." << endl;
+        cin >> type;
+
+        if(type == 0){
+            cout << "Exiting." << endl;
+            break;
+        }
+        else{
+            cout << "=============================================================================" << endl;
+        }
+
+    }while(true);
+    
+    cout << "\n\n23CS037 Prince" << endl;
     return 0;
 }
