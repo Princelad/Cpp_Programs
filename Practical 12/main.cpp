@@ -25,12 +25,15 @@ public:
     }
 
     void putdata_result(){
-        
+
     }
 };
 
 class Result{
-
+private:
+    string subject_name, subject_credit, th_grade, pr_grade;
+    int th_marks, pr_marks;
+    float sgpa; 
 };
 
 int main (){
