@@ -171,7 +171,7 @@ public:
 int main (){
     Student S1;
 
-    system("clear");
+    // system("clear");
 
     S1.getdata_stu();
 
@@ -181,5 +181,6 @@ int main (){
 
     S1.putdata_result();
     
+    cout << "\n\n23CS037 Prince" << endl;
     return 0;
 }
