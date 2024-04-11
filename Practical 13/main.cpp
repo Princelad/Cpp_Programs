@@ -56,8 +56,7 @@ protected:
 
     int searchemp(){
         return emp_num;
-    }
-    
+    }   
 
 public:
     void avg(int total_emp){
@@ -74,8 +73,8 @@ private:
     string Designation, Spec, Pay_scale;
 
 public:
-    void tempinput(){
-        input();
+    void input(){
+        employee :: input();
 
         cin.ignore();
 
@@ -87,16 +86,16 @@ public:
         getline(cin, Pay_scale);
     }
 
-    void tempoutput(){
-        output();
+    void output(){
+        employee :: output();
 
         cout << left << setw(30) << "Designation" << ": " << Designation << endl;
         cout << left << setw(30) << "Specialization" << ": " << Spec << endl;
         cout << left << setw(30) << "Pay scale" << ": " << Pay_scale << "th pay" << endl;
     }
 
-    int tempsearchemp(){
-        return searchemp();
+    int searchemp(){
+        return employee :: searchemp();
     }
 };
 
@@ -105,21 +104,21 @@ private:
     int salary;
 
 public:
-    void tempinput(){
-        input();
+    void input(){
+        employee :: input();
 
         cout << "Enter employee salary :" << endl;
         cin >> salary;
     }
 
-    void tempoutput(){
-        output();
+    void output(){
+        employee :: output();
 
         cout << left << setw(30) << "Salary" << ": " << salary << endl;
     }
 
-    int tempsearchemp(){
-        return searchemp();
+    int searchemp(){
+        return employee :: searchemp();
     }
 };
 
@@ -149,34 +148,34 @@ int main(){
         }
 
         if (type == 1){
-            T_emp[i].tempinput();
+            T_emp[i].input();
 
             for (int k = 0; k < count; k++){
-                if (T_emp[k].tempsearchemp() == T_emp[i].tempsearchemp()){
+                if (T_emp[k].searchemp() == T_emp[i].searchemp()){
                     cout << "--------------------------------------------------------------" << endl;
 
                     cout << "Entered employee ID already exist.Please enter a new employee ID" << endl;
 
                     cout << "--------------------------------------------------------------" << endl;
 
-                    T_emp[i].tempinput();
+                    T_emp[i].input();
                 }
             }
 
             i++;
         }
         else{
-            NT_emp[j].tempinput();
+            NT_emp[j].input();
 
             for (int l = 0; l < count; l++){
-                if (NT_emp[l].tempsearchemp() == NT_emp[j].tempsearchemp()){
+                if (NT_emp[l].searchemp() == NT_emp[j].searchemp()){
                     cout << "--------------------------------------------------------------" << endl;
 
                     cout << "Entered employee ID already exist.Please enter a new employee ID" << endl;
 
                     cout << "--------------------------------------------------------------" << endl;
 
-                    NT_emp[j].tempinput();
+                    NT_emp[j].input();
                 }
             }
 
@@ -226,7 +225,7 @@ int main(){
 
         if (type == 1){
             // Finding the index of the data.
-            while (T_emp[k].tempsearchemp() != num)
+            while (T_emp[k].searchemp() != num)
             {
                 k++;
                 if (k == (MAX_EMPLOYEE))
@@ -250,7 +249,7 @@ int main(){
 
                 if (flag2 == 1)
                 {
-                    T_emp[i].tempinput();
+                    T_emp[i].input();
                 }
                 else
                 {
@@ -259,7 +258,7 @@ int main(){
                 }
             }
             else{
-                T_emp[k].tempoutput();
+                T_emp[k].output();
 
                 // Asking if wants to access info other employee or not.
                 cout << "Do you want get information of another employee if yes the press 'Y' else 'N' for no :" << endl;
@@ -274,7 +273,7 @@ int main(){
         }
         else{
             // Finding the index of the data.
-            while (NT_emp[l].tempsearchemp() != num)
+            while (NT_emp[l].searchemp() != num)
             {
                 l++;
                 if (l == (MAX_EMPLOYEE))
@@ -298,7 +297,7 @@ int main(){
 
                 if (flag2 == 1)
                 {
-                    NT_emp[j].tempinput();
+                    NT_emp[j].input();
                 }
                 else
                 {
@@ -307,7 +306,7 @@ int main(){
                 }
             }
             else{
-                NT_emp[l].tempoutput();
+                NT_emp[l].output();
 
                 // Asking if wants to access info other employee or not.
                 cout << "Do you want get information of another employee if yes the press 'Y' else 'N' for no :" << endl;
