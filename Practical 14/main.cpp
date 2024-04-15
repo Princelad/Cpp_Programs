@@ -157,7 +157,14 @@ int mainMenu(){
     cout << setw(30) << left << "Enter the option" << ": ";
     cin >> option;
 
-    return option;
+    if(option >= 1 && option <= 5){
+        return option;
+    }
+    else {
+        cout << "Enter the proper input." << endl;
+        
+        mainMenu();
+    }
 }
 
 int main(){
