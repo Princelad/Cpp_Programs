@@ -97,7 +97,7 @@ private:
 public:
     void getdata_stu(){
 
-        cout << "=-----------------------------------------------=    Input Student    =-----------------------------------------------=" << endl << endl;
+        cout << "=--------------------------------------------------= Input Student =--------------------------------------------------=" << endl << endl;
         
         cout << setw(40) << left << "Enter the I.D. of the student" << ": ";
         cin.ignore();
